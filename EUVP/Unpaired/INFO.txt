@@ -1,0 +1,15 @@
+Dataset name: Unpaired enhancement
+Nature: an unpaired collection of images on EUVP dataset
+Source: https://irvlab.dl.umn.edu/resources/euvp-dataset
+
+
+Statistics
+-----------
+Unpaired training
+  - trainA contain 3195 poor quality images
+  - trainB contain 3140 enhanced (or better quality) images
+
+Another 330 images are for validation
+
+--------------------------
+* A total of 6,665 images

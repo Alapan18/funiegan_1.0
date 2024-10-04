@@ -1,0 +1,17 @@
+Dataset name: Underwater_imagenet
+Nature: a paired collection of images on EUVP dataset
+Source: https://irvlab.dl.umn.edu/resources/euvp-dataset
+
+
+Statistics
+-----------
+3700 pairs of images (in trainA and trainB folders) for training
+  - trainA contain poor quality images
+  - trainB contain enhanced (or better quality) images
+  - same filenames for each pair
+
+Another 1270 images are for separated for validation
+
+--------------------------
+* A total of 8670 images
+Total file size: 338 MB 

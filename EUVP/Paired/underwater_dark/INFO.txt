@@ -1,0 +1,17 @@
+Dataset name: Underwater_dark
+Nature: a paired collection of images on EUVP dataset
+Source: https://irvlab.dl.umn.edu/resources/euvp-dataset
+
+
+Statistics
+-----------
+5550 pairs of images (in trainA and trainB folders) for training
+  - trainA contain poor quality (or gray) images
+  - trainB contain enhanced (or colored) images
+  - same filenames for each pair
+
+Another 570 images are for validation
+
+----------------------------
+* A total of 11,670 images
+* Total file size: 199 MB
