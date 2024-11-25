@@ -36,8 +36,8 @@ Tensor = torch.cuda.FloatTensor if is_cuda else torch.FloatTensor
 
 ## model arch
 if opt.model_name.lower()=='funiegan':
-    from nets import funiegan
-    model = funiegan.GeneratorFunieGAN()
+    from PyTorch.configs import A2funiegan
+    model = A2funiegan.GeneratorFunieGAN()
 elif opt.model_name.lower()=='ugan':
     from nets.ugan import UGAN_Nets
     model = UGAN_Nets(base_model='pix2pix').netG
