@@ -14,6 +14,15 @@ import numpy as np
 
 
 def Weights_Normal(m):
+    classname = m.__class__.__name__
+    if hasattr(m, 'weight') and classname.find("Conv") != -1:
+        nn.init.normal_(m.weight.data, 0.0, 0.02)
+    elif hasattr(m, 'weight') and classname.find("BatchNorm2d") != -1:
+        nn.init.normal_(m.weight.data, 1.0, 0.02)
+        nn.init.constant_(m.bias.data, 0.0)
+
+"""
+def Weights_Normal(m):
     # initialize weights as Normal(mean, std)
     classname = m.__class__.__name__
     if classname.find("Conv") != -1:
@@ -21,7 +30,7 @@ def Weights_Normal(m):
     elif classname.find("BatchNorm2d") != -1:
         nn.init.normal_(m.weight.data, 1.0, 0.02)
         nn.init.constant_(m.bias.data, 0.0)
-
+"""
 
 class UNetDown(nn.Module):
     """ Standard UNet down-sampling block 
@@ -65,7 +74,7 @@ class VGG19_PercepLoss(nn.Module):
     """
     def __init__(self, _pretrained_=True):
         super(VGG19_PercepLoss, self).__init__()
-        self.vgg = models.vgg19(pretrained=_pretrained_).features
+        self.vgg = models.vgg19(pretrained=_pretrained_).features.cuda() # CHANGE .cuda()
         for param in self.vgg.parameters():
             param.requires_grad_(False)
 
