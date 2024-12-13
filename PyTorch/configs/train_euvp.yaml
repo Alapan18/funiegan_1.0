@@ -9,7 +9,7 @@ im_width: 256
 im_height: 256
 
 # other params
-val_interval: 500 # steps
+val_interval: 200 # steps
 ckpt_interval: 1  # epochs
 
 
